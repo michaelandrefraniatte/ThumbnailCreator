@@ -1,0 +1,395 @@
+<head>
+    <meta charset="fr_FR.UTF-8">
+
+    <meta name="author" content="MICHAEL ANDRE FRANIATTE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>thumbnailcreator by michael franiatte</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Montez|Lobster|Josefin+Sans|Shadows+Into+Light|Pacifico|Amatic+SC:700|Orbitron:400,900|Rokkitt|Righteous|Dancing+Script:700|Bangers|Chewy|Sigmar+One|Architects+Daughter|Abril+Fatface|Covered+By+Your+Grace|Kaushan+Script|Gloria+Hallelujah|Satisfy|Lobster+Two:700|Comfortaa:700|Cinzel|Courgette' rel='stylesheet' type='text/css'>
+
+    <style>
+        body {
+            background-color: white;
+            color: black;
+	    width: 100%;
+	    height: 100%;
+	    overflow: auto;
+        }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #444;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #eee;
+    }
+
+    </style>
+
+
+    <style>
+
+#Font {
+            background-color: grey;
+            color: black;
+	    width: 400px;
+	    overflow: auto;
+	    display: block;
+	    position: absolute;
+	    right: 400px;
+            top: 0px;
+	    text-align: center;
+            padding: 10px;
+	    display: none;
+        }
+
+#famillies, #weights, #styles, #aligns, #decorations, #bolds, button {
+	font-size: 20px;
+	margin: 10px;
+}
+
+#colors {
+  width: 150px;
+  background-color: white;
+  margin: 10px;
+}
+
+#bckgcolors {
+  width: 150px;
+  background-color: white;
+  margin: 10px;
+}
+
+    </style>
+
+</head>
+<body>
+
+<div id="Page"></div>
+
+<div id="Font">
+	<button onClick="addFont();">Add</button><br>
+	<select id='famillies' onChange="fontFamily();"></select><br>
+	<select id='bolds' onChange="fontBold();"></select><br>
+	<select id="colors" onChange="fontColor();">
+        	<option value="white"></option>
+        	<option value="yellow"></option>
+        	<option value="red"></option>
+        	<option value="green"></option>
+        	<option value="blue"></option>
+	</select><br>
+	<select id="bckgcolors" onChange="fontBckgColor();">
+        	<option value="transparent"></option>
+        	<option value="white"></option>
+        	<option value="yellow"></option>
+        	<option value="red"></option>
+        	<option value="green"></option>
+        	<option value="blue"></option>
+	</select><br>
+	<select id="weights" onChange="fontWeight();"></select><br>
+	<select id="styles" onChange="fontStyle();"></select><br>
+	<select id="aligns" onChange="fontAlign();">
+        	<option>center</option>
+        	<option>left</option>
+        	<option>right</option>
+	</select><br>
+	<select id="decorations" onChange="fontDecoration();"></select>
+</div>
+
+<script>
+var elementclicked = '';
+var pjselementclicked = '';
+var boolelementclicked = false;
+var boolnewelementclicked = false;
+function importImage(filename) {
+	var domstring = `<img style="postion:absolute;" src="` + filename + `" onclick="setFilename(this);">`;
+	document.getElementById("Page").innerHTML += domstring;
+	elementclicked = $('#Page').children('img').last();
+}
+function setFilename(element) {
+	if (!boolnewelementclicked) {
+		pjselementclicked = element;
+		if (pjselementclicked.className == 'text') {
+			setTextFormat();
+		}
+		elementclicked = $(element);
+		boolelementclicked = false;
+		setTimeout(elementclick, 100);
+		boolnewelementclicked = true;
+		getFilename(element.src);
+	}
+	else {
+		boolnewelementclicked = false;
+	}
+}
+function elementclick() {
+	boolelementclicked = true;
+}
+var offsetX = '';
+var offsetY = '';
+var inc = 0;
+$("body").mousemove(function(event) {
+	offsetX = event.pageX;
+	offsetY = event.pageY;
+	if (boolelementclicked) {
+		inc++;
+		if (inc > 2) {
+			elementclicked.css({ 'left': offsetX + 'px', 'top': offsetY + 'px', 'position': 'absolute' });
+			inc = 0;
+		}
+		$(document).click(function() {
+			boolelementclicked = false;
+		});
+	}
+});
+function removeImage() {
+	if (elementclicked != "") {
+		elementclicked.remove();
+		boolelementclicked = false;
+		elementclicked = '';
+	}
+}
+var pixelsize = 0;
+function resizeMinus() {
+	if (elementclicked != "") {
+		pixelsize = elementclicked.width();
+		pixelsize -= 15;
+		elementclicked.css({ "width": pixelsize + "px", "heigth": "auto" });
+	}
+}
+function resizePlus() {
+	if (elementclicked != "") {
+		pixelsize = elementclicked.width();
+		pixelsize += 15;
+		elementclicked.css({ "width": pixelsize + "px", "heigth": "auto" });
+	}
+}
+var degreerotation = 0;
+function rotateMinus() {
+	if (elementclicked != "") {
+		degreerotation -= 10;
+		elementclicked.css({ 
+    			"-webkit-transform": "rotate(" + degreerotation + "deg)",
+    			"-moz-transform": "rotate(" + degreerotation + "deg)",
+    			"transform": "rotate(" + degreerotation + "deg)"
+		});
+	}
+}
+function rotatePlus() {
+	if (elementclicked != "") {
+		degreerotation += 10;
+		elementclicked.css({ 
+    			"-webkit-transform": "rotate(" + degreerotation + "deg)",
+    			"-moz-transform": "rotate(" + degreerotation + "deg)",
+    			"transform": "rotate(" + degreerotation + "deg)"
+		});
+	}
+}
+function setBack() {
+	$('.text, img').sort(function(a, b) {
+  		if (a > b) {
+    			return 1;
+  		} 
+		else {
+			return -1;
+		}
+	}).appendTo('#Page');
+}
+function setFront() {
+	$('img, .text').sort(function(a, b) {
+  		if (a > b) {
+    			return -1;
+  		} 
+		else {
+			return 1;
+		}
+	}).appendTo('#Page');
+}
+function newPage() {
+	$("#Page").empty();
+}
+function saveHTML() {
+	var markup = document.documentElement.innerHTML;
+	saveDocument(markup);
+}
+$('body').attr("spellcheck", false);
+var boolfont = true;
+function displayFont() {
+	var font = document.getElementById("Font");
+	if (!boolfont) {
+		font.style.display = 'block';
+		boolfont = true;
+	}
+	else {
+		font.style.display = 'none';
+		boolfont = false;
+	}
+}
+function addFont() {
+	var domstring = `<div class="text" contenteditable="true" style="width:fit-content;font-family:Arial;" onclick="setFilename(this);">Grumpy wizards make toxic brew for the evil Queen and Jack.</div>`;
+	document.getElementById("Page").innerHTML += domstring;
+	elementclicked = $('#Page').children('.text').last();
+}
+displayFont();
+var fonts = ["Arial", "sans-serif", "Montez","Lobster","Josefin Sans","Shadows Into Light","Pacifico","Amatic SC", "Orbitron", "Rokkitt","Righteous","Dancing Script","Bangers","Chewy","Sigmar One","Architects Daughter","Abril Fatface","Covered By Your Grace","Kaushan Script","Gloria Hallelujah","Satisfy","Lobster Two","Comfortaa","Cinzel","Courgette"];
+var fontstyles = ["normal", "italic", "oblique"];
+var fontbolds = ["normal", "bold", "lighter", "bolder", "100", "900"];
+var fontdecorations = ["none", "blink", "line-through", "overline", "underline", "dotted", "wavy"];
+var famillies = document.getElementById("famillies");
+var bolds = document.getElementById("bolds");
+var colors = document.getElementById("colors");
+var bckgcolors = document.getElementById("bckgcolors");
+var weights = document.getElementById("weights");
+var styles = document.getElementById("styles");
+var aligns = document.getElementById("aligns");
+var decorations = document.getElementById("decorations");
+for(var a = 0; a < fonts.length ; a++) {
+	var opt = document.createElement('option');
+	opt.value = opt.innerHTML = fonts[a];
+	opt.style.fontFamily = fonts[a];
+	famillies.add(opt);
+}
+function fontFamily(){
+	famillies.style.fontFamily = fonts[famillies.selectedIndex];
+	if (elementclicked != "") {
+		elementclicked.css({ 'font-family': fonts[famillies.selectedIndex] });
+	}
+}
+fontFamily();
+for(var a = 0; a < fontbolds.length ; a++) {
+	var opt = document.createElement('option');
+	opt.value = opt.innerHTML = fontbolds[a];
+	opt.style.fontWeight = fontbolds[a];
+	bolds.add(opt);
+}
+function fontBold() {
+	bolds.style.fontWeight = fontbolds[bolds.selectedIndex];
+	if (elementclicked != "") {
+		elementclicked.css({ 'font-weight': fontbolds[bolds.selectedIndex] });
+	}
+}
+fontBold();
+$('#colors option').each(function() {
+  $(this).css('background-color', $(this).val());
+});
+function fontColor(){
+        $("#colors").css('background-color', $("#colors").val());
+	if (elementclicked != "") {
+		elementclicked.css({ 'color': $("#colors").val() });
+	}
+}
+fontColor();
+$('#bckgcolors option').each(function() {
+  $(this).css('background-color', $(this).val());
+});
+function fontBckgColor(){
+        $("#bckgcolors").css('background-color', $("#bckgcolors").val());
+	if (elementclicked != "") {
+		elementclicked.css({ 'background-color': $("#bckgcolors").val() });
+	}
+}
+fontBckgColor();
+for(var a = 10; a <= 200; a = a + 2) {
+	var opt = document.createElement('option');
+	opt.innerHTML = a + "px";
+	weights.add(opt);
+}
+function fontWeight(){
+	if (elementclicked != "") {
+		elementclicked.css({ 'font-size': weights.options[weights.selectedIndex].text });
+	}
+}
+fontWeight();
+for(var a = 0; a < fontstyles.length ; a++) {
+	var opt = document.createElement('option');
+	opt.value = opt.innerHTML = fontstyles[a];
+	opt.style.fontStyle = fontstyles[a];
+	styles.add(opt);
+}
+function fontStyle(){
+	styles.style.fontStyle = fontstyles[styles.selectedIndex];
+	if (elementclicked != "") {
+		elementclicked.css({ 'font-style': fontstyles[styles.selectedIndex] });
+	}
+}
+fontStyle();
+function fontAlign(){
+	styles.style.textAlign = aligns.options[aligns.selectedIndex].text;
+	if (elementclicked != "") {
+		elementclicked.css({ 'text-align': aligns.options[aligns.selectedIndex].text });
+	}
+}
+fontAlign();
+for(var a = 0; a < fontdecorations.length ; a++) {
+	var opt = document.createElement('option');
+	opt.innerHTML = fontdecorations[a];
+	opt.style.textDecoration = fontdecorations[a];
+	decorations.add(opt);
+}
+function fontDecoration(){
+	styles.style.textDecoration = decorations.options[decorations.selectedIndex].text;
+	if (elementclicked != "") {
+		elementclicked.css({ 'text-decoration': decorations.options[decorations.selectedIndex].text });
+	}
+}
+fontDecoration();
+function setTextFormat() {
+	for(var i = 0, j = famillies.options.length; i < j; ++i) {
+        	if(famillies.options[i].innerHTML === pjselementclicked.style.fontFamily) {
+			famillies.selectedIndex = i;
+			famillies.style.fontFamily = fonts[i];
+			break;
+		}
+        }
+	for(var i = 0, j = bolds.options.length; i < j; ++i) {
+        	if(bolds.options[i].innerHTML === pjselementclicked.style.fontWeight) {
+			bolds.selectedIndex = i;
+			bolds.style.fontWeight = fontbolds[i];
+			break;
+		}
+        }
+	$("#colors").css('background-color', pjselementclicked.style.color);
+        $("#bckgcolors").css('background-color', pjselementclicked.style.backgroundColor);
+	for(var i = 0, j = weights.options.length; i < j; ++i) {
+        	if(weights.options[i].innerHTML === pjselementclicked.style.fontSize) {
+			weights.selectedIndex = i;
+			break;
+		}
+        }
+	for(var i = 0, j = styles.options.length; i < j; ++i) {
+        	if(styles.options[i].innerHTML === pjselementclicked.style.fontStyle) {
+			styles.selectedIndex = i;
+			styles.style.fontStyle = fontstyles[i];
+			break;
+		}
+        }
+	for(var i = 0, j = aligns.options.length; i < j; ++i) {
+        	if(aligns.options[i].innerHTML === pjselementclicked.style.textAlign) {
+			aligns.selectedIndex = i;
+			styles.style.textAlign = aligns.options[i].text;
+			break;
+		}
+        }
+	for(var i = 0, j = decorations.options.length; i < j; ++i) {
+        	if(decorations.options[i].innerHTML === pjselementclicked.style.textDecoration) {
+			decorations.selectedIndex = i;
+			styles.style.textDecoration = decorations.options[i].text;
+			break;
+		}
+        }
+}
+
+</script>
+
+</body>
