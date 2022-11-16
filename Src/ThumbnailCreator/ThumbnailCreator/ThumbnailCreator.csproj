@@ -37,13 +37,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EO.Base, Version=22.0.30.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
-      <HintPath>..\packages\EO.WebBrowser.22.0.30\lib\EO.Base.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\EO.Base.dll</HintPath>
     </Reference>
     <Reference Include="EO.WebBrowser, Version=22.0.30.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
-      <HintPath>..\packages\EO.WebBrowser.22.0.30\lib\EO.WebBrowser.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\EO.WebBrowser.dll</HintPath>
     </Reference>
     <Reference Include="EO.WebEngine, Version=22.0.30.0, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
-      <HintPath>..\packages\EO.WebBrowser.22.0.30\lib\EO.WebEngine.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\EO.WebEngine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -79,7 +82,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
