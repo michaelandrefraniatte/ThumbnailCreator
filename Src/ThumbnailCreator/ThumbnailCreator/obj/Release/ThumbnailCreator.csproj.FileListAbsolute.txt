@@ -18,14 +18,10 @@ C:\Users\mic\Documents\GitHub\TC\Src\ThumbnailCreator\ThumbnailCreator\obj\Relea
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\bin\Release\ThumbnailCreator.exe.config
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\bin\Release\ThumbnailCreator.exe
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\bin\Release\ThumbnailCreator.pdb
-C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\bin\Release\EO.Base.dll
-C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\bin\Release\EO.WebBrowser.dll
-C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\bin\Release\EO.WebEngine.dll
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\bin\Release\EO.Base.xml
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\bin\Release\EO.WebBrowser.xml
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\bin\Release\EO.WebEngine.xml
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\ThumbnailCreator.csproj.AssemblyReference.cache
-C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\ThumbnailCreator.csproj.SuggestedBindingRedirects.cache
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\ThumbnailCreator.Form1.resources
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\ThumbnailCreator.Properties.Resources.resources
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\ThumbnailCreator.csproj.GenerateResource.cache

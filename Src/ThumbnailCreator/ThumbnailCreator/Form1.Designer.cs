@@ -52,6 +52,7 @@ namespace ThumbnailCreator
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(0, 0);
             this.pictureBox1.TabIndex = 0;
@@ -66,8 +67,9 @@ namespace ThumbnailCreator
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 1;
             this.button1.Text = "Import";
             this.button1.UseVisualStyleBackColor = true;
@@ -75,9 +77,10 @@ namespace ThumbnailCreator
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(81, 0);
+            this.button2.Location = new System.Drawing.Point(108, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 2;
             this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = true;
@@ -85,9 +88,10 @@ namespace ThumbnailCreator
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(984, 0);
+            this.button3.Location = new System.Drawing.Point(1312, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 3;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = true;
@@ -95,16 +99,18 @@ namespace ThumbnailCreator
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(881, 2);
+            this.textBox1.Location = new System.Drawing.Point(1175, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(16, 20);
+            this.textBox1.Size = new System.Drawing.Size(20, 22);
             this.textBox1.TabIndex = 4;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(243, 0);
+            this.button4.Location = new System.Drawing.Point(324, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 5;
             this.button4.Text = "Resize +";
             this.button4.UseVisualStyleBackColor = true;
@@ -112,9 +118,10 @@ namespace ThumbnailCreator
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(162, 0);
+            this.button5.Location = new System.Drawing.Point(216, 0);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(100, 28);
             this.button5.TabIndex = 6;
             this.button5.Text = "Resize -";
             this.button5.UseVisualStyleBackColor = true;
@@ -122,9 +129,10 @@ namespace ThumbnailCreator
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(405, 0);
+            this.button6.Location = new System.Drawing.Point(540, 0);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(100, 28);
             this.button6.TabIndex = 7;
             this.button6.Text = "Rotate +";
             this.button6.UseVisualStyleBackColor = true;
@@ -132,9 +140,10 @@ namespace ThumbnailCreator
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(324, 0);
+            this.button7.Location = new System.Drawing.Point(432, 0);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(100, 28);
             this.button7.TabIndex = 8;
             this.button7.Text = "Rotate -";
             this.button7.UseVisualStyleBackColor = true;
@@ -142,9 +151,10 @@ namespace ThumbnailCreator
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(486, 0);
+            this.button8.Location = new System.Drawing.Point(648, 0);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.Size = new System.Drawing.Size(100, 28);
             this.button8.TabIndex = 9;
             this.button8.Text = "Back";
             this.button8.UseVisualStyleBackColor = true;
@@ -152,9 +162,10 @@ namespace ThumbnailCreator
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(648, 0);
+            this.button9.Location = new System.Drawing.Point(864, 0);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.Size = new System.Drawing.Size(100, 28);
             this.button9.TabIndex = 10;
             this.button9.Text = "Front";
             this.button9.UseVisualStyleBackColor = true;
@@ -162,9 +173,10 @@ namespace ThumbnailCreator
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(903, 0);
+            this.button10.Location = new System.Drawing.Point(1204, 0);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.Size = new System.Drawing.Size(100, 28);
             this.button10.TabIndex = 11;
             this.button10.Text = "Copy";
             this.button10.UseVisualStyleBackColor = true;
@@ -172,9 +184,10 @@ namespace ThumbnailCreator
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(729, 0);
+            this.button11.Location = new System.Drawing.Point(972, 0);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.Size = new System.Drawing.Size(100, 28);
             this.button11.TabIndex = 12;
             this.button11.Text = "New";
             this.button11.UseVisualStyleBackColor = true;
@@ -182,9 +195,10 @@ namespace ThumbnailCreator
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(810, 0);
+            this.button12.Location = new System.Drawing.Point(1080, 0);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(65, 23);
+            this.button12.Size = new System.Drawing.Size(87, 28);
             this.button12.TabIndex = 13;
             this.button12.Text = "Open";
             this.button12.UseVisualStyleBackColor = true;
@@ -192,9 +206,10 @@ namespace ThumbnailCreator
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(567, 0);
+            this.button13.Location = new System.Drawing.Point(756, 0);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.Size = new System.Drawing.Size(100, 28);
             this.button13.TabIndex = 14;
             this.button13.Text = "Text";
             this.button13.UseVisualStyleBackColor = true;
@@ -202,9 +217,9 @@ namespace ThumbnailCreator
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 661);
+            this.ClientSize = new System.Drawing.Size(1445, 814);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
@@ -221,12 +236,14 @@ namespace ThumbnailCreator
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThumbnailCreator";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
