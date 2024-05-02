@@ -26,6 +26,6 @@ C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailC
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\ThumbnailCreator.Properties.Resources.resources
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\ThumbnailCreator.csproj.GenerateResource.cache
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\ThumbnailCreator.csproj.CoreCompileInputs.cache
-C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\ThumbnailCreator.csproj.CopyComplete
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\ThumbnailCreator.exe
 C:\Users\micha\Documents\GitHub\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\ThumbnailCreator.pdb
+C:\Users\micha\Documents\github\ThumbnailCreator\Src\ThumbnailCreator\ThumbnailCreator\obj\Release\Thumbnai.1FE3B7B5.Up2Date
